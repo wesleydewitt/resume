@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --base-unit: 24px;
+        --half-base-unit: calc(var(--base-unit) / 2);
+        --quarter-base-unit: calc(var(--base-unit) / 4);
+      }
+
+      @page {
+        background-color: #ffffff;
+        size: letter; /* 8.5in × 11in */
+        margin: 58px; /* top right bottom left */
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #dddddd;
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: var(--base-unit);
+      }
+
+      .header__name {
+        font-weight: 500;
+        line-height: 1;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .header__info {
+        display: flex;
+        gap: var(--base-unit);
+        justify-content: center;
+        margin-top: var(--half-base-unit);
+      }
+
+      .main {
+        border-top: 1px solid #000;
+        margin-top: var(--base-unit);
+        padding-top: var(--base-unit);
+      }
+
+      .main p + p {
+        margin-top: var(--base-unit);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__name">Wesley De Witt</h1>
+      <div class="header__info">
+        <div class="header__info__item">(317) 419-9842</div>
+        <div class="header__info__item">wesbdewitt@gmail.com</div>
+        <div class="header__info__item">Indianapolis, Indiana</div>
+      </div>
+    </header>
+
+    <main class="main">
+      <p>Dear Hiring Manager,</p>
+      <p>
+        I would like to express my interest in any available position in your
+        business. I possess excellent experience and skills, and I hope you will
+        agree that they leave me well-equipped for a wide range of roles.
+      </p>
+      <p>
+        To summarize my work history, I would like to begin by emphasizing my
+        time at Welch Packaging. At Welch Packaging, I operated a forklift to
+        manage the flow of corrugated cardboard bales off the assembly line,
+        moving them into trailers for shipment and into designated storage areas
+        within the facility. This required not only proficiency with the
+        forklift itself but also careful attention to the safe and efficient
+        organization of materials in a fast-paced warehouse environment.
+      </p>
+      <p>
+        Prior to Welch Packaging I worked for Ball State University, where I was
+        a technician in the Operations Control Center. In this position, I was
+        mainly tasked with performing routine software and hardware checks,
+        executing incident resolution procedures, and assisting users with
+        two-factor authentication and account management. All of this was in
+        service of maintaining the necessary operation and use of the data
+        center at Ball State, which was responsible for hosting a wide range of
+        services, from the university’s website to online course materials to
+        student and employee records.
+      </p>
+      <p>
+        Prior to Ball State I worked for Amazon in a warehouse facility that
+        processed customer returns. My primary responsibilities were to ensure
+        that returns were properly routed through various departments, address
+        discrepancies between the products received and the Amazon web listing,
+        and conduct one-on-one coaching sessions on quality standards.
+      </p>
+      <p>
+        At Lucky’s Market, where I was the Scanning Coordinator, I not only
+        managed the price tags and point-of-sale software but I also interacted
+        with and assisted customers on a daily basis. In fact, I started out as
+        a cashier, a role which required non-stop customer interaction and
+        friendly service. While there I also instituted a new aisle-by-aisle
+        process for distributing tags throughout the store. The result of this
+        was a much reduced ratio of time spent to tags posted, so that there
+        were fewer price discrepancies at the registers and more happy,
+        satisfied customers.
+      </p>
+      <p>
+        At Welch Packaging, Ball State, Amazon, and Lucky’s Market, I balanced
+        the need to independently solve technical and operational problems with
+        the need for interpersonal skills to cooperate with customers, students,
+        faculty, and fellow employees.
+      </p>
+      <p>
+        I hope you find this summary of my ability to meet the needs of your
+        business to be sufficient. If you have any questions, please feel free
+        to reach out.
+      </p>
+      <p>Thanks for your consideration,<br />Wesley De Witt</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,328 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --base-unit: 24px;
+        --half-base-unit: calc(var(--base-unit) / 2);
+        --quarter-base-unit: calc(var(--base-unit) / 4);
+      }
+
+      @page {
+        background-color: #ffffff;
+        size: letter; /* 8.5in × 11in */
+        margin: 58px; /* top right bottom left */
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #dddddd;
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: var(--base-unit);
+      }
+
+      ul {
+        list-style-type: none;
+      }
+
+      ul li::marker {
+        content: "-\00A0";
+      }
+
+      .header__name {
+        font-weight: 500;
+        line-height: 1;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .header__info {
+        display: flex;
+        gap: var(--base-unit);
+        justify-content: center;
+        margin-top: var(--half-base-unit);
+      }
+
+      .main {
+        display: grid;
+        gap: 0 calc(2 * var(--base-unit));
+        grid-template-columns: auto 1fr;
+        margin-top: var(--base-unit);
+      }
+
+      .section {
+        border-top: 1px solid #000;
+        display: grid;
+        grid-column: span 2;
+        grid-template-columns: subgrid;
+        /* margin-top: var(--half-base-unit); */
+        padding-top: var(--half-base-unit);
+      }
+
+      .section + .section {
+        margin-top: var(--half-base-unit);
+      }
+
+      .section__heading {
+        font-size: inherit;
+        font-weight: 500;
+        line-height: var(--base-unit);
+      }
+
+      .section--skills .section__content {
+        display: flex;
+        flex-direction: column;
+        gap: calc(var(--base-unit) / 2);
+      }
+
+      .skill__heading {
+        font-weight: 500;
+        font-size: inherit;
+      }
+
+      .skill__subheading {
+        font-weight: inherit;
+        font-size: inherit;
+      }
+
+      .section--summary .section__content {
+        text-align: justify;
+      }
+
+      .section--experience .section__content,
+      .section--education .section__content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--quarter-base-unit);
+      }
+
+      .experience-entry {
+        display: grid;
+        gap: 0 var(--half-base-unit);
+        grid-template-columns: auto 1fr auto;
+      }
+
+      .experience-entry + .experience-entry {
+        border-top: 1px solid #888;
+        padding-top: var(--quarter-base-unit);
+      }
+
+      .experience-entry__title {
+        font-weight: 500;
+      }
+
+      .experience-entry__company-location {
+        font-style: oblique;
+      }
+
+      .experience-entry__description {
+        grid-column: span 3;
+        padding-left: var(--half-base-unit);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__name">Wesley De Witt</h1>
+      <div class="header__info">
+        <div class="header__info__item">(317) 419-9842</div>
+        <div class="header__info__item">wesbdewitt@gmail.com</div>
+        <div class="header__info__item">Indianapolis, Indiana</div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="section section--summary">
+        <h2 class="section__heading">Summary</h2>
+        <div class="section__content">
+          <p>
+            Over the course of my career, I have worked in retail, as an Uber
+            driver, in logistics, and as an IT technician while a student at
+            Ball State University. From this experience I have developed a broad
+            skillset that leaves me equipped for a role in any business that is
+            in need of an employee who is well-rounded and broadly adaptable.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--skills">
+        <h2 class="section__heading">Skills</h2>
+        <div class="section__content">
+          <div class="skill">
+            <h3 class="skill__heading">Customer Service</h3>
+            <h4 class="skill__subheading">
+              Years of front-line retail and rideshare experience keeping
+              customers happy.
+            </h4>
+          </div>
+
+          <div class="skill">
+            <h3 class="skill__heading">Physical Capability</h3>
+            <h4 class="skill__subheading">
+              Able to lift heavy loads, stand for extended periods, and keep
+              pace in a fast-moving environment.
+            </h4>
+          </div>
+
+          <div class="skill">
+            <h3 class="skill__heading">Forklift Operation</h3>
+            <h4 class="skill__subheading">
+              Hands-on experience operating a forklift in a warehouse setting.
+            </h4>
+          </div>
+
+          <div class="skill">
+            <h3 class="skill__heading">Computer Proficiency</h3>
+            <h4 class="skill__subheading">
+              Experienced with Microsoft Office and comfortable learning new
+              software quickly.
+            </h4>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--experience">
+        <h2 class="section__heading">Experience</h2>
+        <div class="section__content">
+          <div class="experience-entry">
+            <div class="experience-entry__title">Uber Driver</div>
+            <div class="experience-entry__company-location">
+              Uber in Indianapolis, Indiana
+            </div>
+            <div class="experience-entry__duration">Jan 2025 - present</div>
+            <div class="experience-entry__description">
+              <ul>
+                <li>
+                  Provide excellent guest service and safe driving practices
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-entry">
+            <div class="experience-entry__title">Material Handler</div>
+            <div class="experience-entry__company-location">
+              Welch Packaging in Indianapolis, Indiana
+            </div>
+            <div class="experience-entry__duration">Dec 2024 - Feb 2025</div>
+            <div class="experience-entry__description">
+              <ul>
+                <li>
+                  Operated a forklift to move bales of corrugated cardboard onto
+                  trailers
+                </li>
+                <li>
+                  Worked on a line to assemble bales of corrugated cardboard
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-entry">
+            <div class="experience-entry__title">
+              Operations Control Center Technician
+            </div>
+            <div class="experience-entry__company-location">
+              Ball State University in Muncie, Indiana
+            </div>
+            <div class="experience-entry__duration">Jul 2023 - Feb 2024</div>
+            <div class="experience-entry__description">
+              <ul>
+                <li>
+                  Monitored data center operations and executed incident
+                  resolution procedures
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-entry">
+            <div class="experience-entry__title">
+              Inbound Support Services Representative
+            </div>
+            <div class="experience-entry__company-location">
+              Amazon in Indianapolis, Indiana
+            </div>
+            <div class="experience-entry__duration">Feb 2020 - May 2021</div>
+            <div class="experience-entry__description">
+              <ul>
+                <li>
+                  Processed complicated customer returns to ensure proper
+                  routing through the facility
+                </li>
+                <li>
+                  Initiated resolution procedures for discrepant Amazon listings
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-entry">
+            <div class="experience-entry__title">Scanning Coordinator</div>
+            <div class="experience-entry__company-location">
+              Lucky's Market in Bloomington, Indiana
+            </div>
+            <div class="experience-entry__duration">Aug 2017 - May 2019</div>
+            <div class="experience-entry__description">
+              <ul>
+                <li>Managed price tags and marketing collateral</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-entry">
+            <div class="experience-entry__title">Juice Bar Clerk</div>
+            <div class="experience-entry__company-location">
+              Kroger in Bloomington, Indiana
+            </div>
+            <div class="experience-entry__duration">Jul 2016 - May 2017</div>
+            <div class="experience-entry__description">
+              <ul>
+                <li>Prepared custom juices and smoothies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--education">
+        <h2 class="section__heading">Education</h2>
+        <div class="section__content">
+          <div class="experience-entry">
+            <div class="experience-entry__title">
+              B.S., Computer Science (Incomplete)
+            </div>
+            <div class="experience-entry__company-location">
+              Ball State University in Muncie, Indiana
+            </div>
+            <div class="experience-entry__duration">2022 - 2024</div>
+          </div>
+
+          <div class="experience-entry">
+            <div class="experience-entry__title">
+              General Studies, Various Credits
+            </div>
+            <div class="experience-entry__company-location">
+              Ivy Tech Community College in Bloomington, Indiana
+            </div>
+            <div class="experience-entry__duration">2015 - 2017</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
