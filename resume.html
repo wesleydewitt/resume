@@ -2,12 +2,6 @@
 <html>
   <head>
     <script src="https://unpkg.com/pagedjs/dist/paged.polyfill.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
 
     <style>
       :root {
@@ -19,7 +13,7 @@
       @page {
         background-color: #ffffff;
         size: letter; /* 8.5in × 11in */
-        margin: 58px; /* top right bottom left */
+        margin: 50px; /* top right bottom left */
       }
 
       * {
@@ -29,13 +23,14 @@
 
       body {
         background-color: #dddddd;
-        font-family: "Roboto", sans-serif;
+        font-family: "Inter", sans-serif;
         font-size: 12px;
-        font-weight: 300;
+        font-weight: 400;
         line-height: var(--base-unit);
       }
 
       ul {
+        padding-left: var(--half-base-unit);
         list-style-type: none;
       }
 
@@ -44,16 +39,16 @@
       }
 
       .header__name {
-        font-weight: 500;
+        font-weight: 700;
         line-height: 1;
-        font-size: 20px;
-        text-align: center;
+        font-size: 28px;
+        /* text-align: center; */
       }
 
       .header__info {
         display: flex;
-        gap: var(--base-unit);
-        justify-content: center;
+        gap: var(--half-base-unit);
+        /* justify-content: center; */
         margin-top: var(--half-base-unit);
       }
 
@@ -79,7 +74,7 @@
 
       .section__heading {
         font-size: inherit;
-        font-weight: 500;
+        font-weight: 700;
         line-height: var(--base-unit);
       }
 
@@ -90,7 +85,7 @@
       }
 
       .skill__heading {
-        font-weight: 500;
+        font-weight: 700;
         font-size: inherit;
       }
 
@@ -107,7 +102,7 @@
       .section--education .section__content {
         display: flex;
         flex-direction: column;
-        gap: var(--quarter-base-unit);
+        gap: var(--half-base-unit);
       }
 
       .experience-entry {
@@ -117,12 +112,12 @@
       }
 
       .experience-entry + .experience-entry {
-        border-top: 1px solid #888;
-        padding-top: var(--quarter-base-unit);
+        /* border-top: 1px solid #ccc; */
+        /* padding-top: var(--quarter-base-unit); */
       }
 
       .experience-entry__title {
-        font-weight: 500;
+        font-weight: 700;
       }
 
       .experience-entry__company-location {
@@ -130,8 +125,14 @@
       }
 
       .experience-entry__description {
-        grid-column: span 3;
+        grid-column: span 2;
         padding-left: var(--half-base-unit);
+      }
+
+      .experience-entry__duration {
+        display: flex;
+        align-items: center;
+        grid-row: span 2;
       }
     </style>
   </head>
@@ -141,7 +142,7 @@
       <div class="header__info">
         <div class="header__info__item">(317) 419-9842</div>
         <div class="header__info__item">wesbdewitt@gmail.com</div>
-        <div class="header__info__item">Indianapolis, Indiana</div>
+        <div class="header__info__item">Muncie, Indiana</div>
       </div>
     </header>
 
@@ -261,8 +262,7 @@
             <div class="experience-entry__description">
               <ul>
                 <li>
-                  Processed complicated customer returns to ensure proper
-                  routing through the facility
+                  Processed customer returns to ensure proper package routing
                 </li>
                 <li>
                   Initiated resolution procedures for discrepant Amazon listings
